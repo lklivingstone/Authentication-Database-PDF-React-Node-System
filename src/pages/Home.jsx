@@ -40,7 +40,7 @@ return (
                         <a href="/">Home</a>
                     </li>
                     <li>
-                        <a href="/admin">Admin</a>
+                        <a href="/login">Admin</a>
                     </li>
                 </ul>
             </div>

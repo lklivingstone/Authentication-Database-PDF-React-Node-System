@@ -16,6 +16,7 @@ import Entry from './pages/Entry';
 function App() {
 
   const user= useSelector(selectUser)
+  // console.log(user)
   return (
     <div className="App">
       {/* <Home /> */}
@@ -23,7 +24,7 @@ function App() {
         <Routes>
           <Route exact path="/" element= {<Home />} />
           <Route path="/login" element= {user ? <Navigate to="/admin" replace /> :  <Login />} />
-          <Route path="/admin" element= {!user ? <Navigate to="/login" replace /> :  <Admin />} />
+          <Route path="/admin" element= {user===null ? <Navigate to="/login" replace /> :  <Admin />} />
           <Route path="/entry/:tokenNumber" element= {<Entry />} />
         </Routes>
       </BrowserRouter>
