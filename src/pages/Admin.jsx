@@ -27,7 +27,7 @@ const Admin = () => {
     useEffect(()=> {
         const getData= async () => {
             try {
-                const res= await axios.get("http://localhost:5000/api/entry/")
+                const res= await axios.get("https://login-auth-database-pdf.onrender.com/api/entry/")
                 setData(res.data)
                 setRows(res.data)
             }catch(err) {
@@ -47,8 +47,8 @@ const Admin = () => {
     const handlePDF = async (e) => {
         // console.log(e)
         try {
-            window.open(`http://localhost:5000/api/pdf/?target=http://localhost:3000/entry/${e}`, '_blank', 'noopener,noreferrer');
-            const res= await axios.get(`http://localhost:5000/api/pdf/?target=http://localhost:3000/entry/${e}`)
+            window.open(`https://login-auth-database-pdf.onrender.com/api/pdf/?target=https://login-auth-database-pdf.netlify.app/entry/${e}`, '_blank', 'noopener,noreferrer');
+            const res= await axios.get(`https://login-auth-database-pdf.onrender.com/api/pdf/?target=https://login-auth-database-pdf.netlify.app/entry/${e}`)
         } catch(err) {
 
         }

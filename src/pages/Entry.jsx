@@ -16,7 +16,7 @@ const Entry = ({entryNumber, name, number, tokenNumber}) => {
     useEffect(()=> {
         const getData= async () => {
             try {
-                const res= await axios.get(`http://localhost:5000/api/entry/find/${token}`)
+                const res= await axios.get(`https://login-auth-database-pdf.onrender.com/api/entry/find/${token}`)
                 setData(res.data)
             }catch(err) {
 
