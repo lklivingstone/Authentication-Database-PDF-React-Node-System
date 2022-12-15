@@ -9,7 +9,7 @@ app.use(cookieParser())
 
 app.use(cors({
     credentials: true,
-    origin: ["https://login-auth-database-pdf.netlify.app/"]
+    origin: true
 }))
 
 app.use(express.json())
