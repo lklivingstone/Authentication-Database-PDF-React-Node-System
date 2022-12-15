@@ -16,7 +16,6 @@ app.use(express.json())
 
 const authRoute= require("./routes/auth")
 const entryRoute= require("./routes/entry")
-const pdfGenerateRoute= require("./routes/pdfGenerate")
 
 app.use("/api/auth", authRoute)
 app.use("/api/entry", entryRoute)
