@@ -45,20 +45,6 @@ router.post("/", (req, res) => {
         }
     )
 
-    // const entry= new Entry({
-    //     username:  req.body.username ,
-    //     name: req.body.name ,
-    //     tokenNumber: req.body.tokenNumber ,
-    //     entryNumber: req.body.entryNumber ,
-    // })
-
-    // try {
-    //     const newEntry= await entry.save()
-    //     res.status(200).json(newEntry)
-    // }
-    // catch (err) {
-    //     res.status(500).json(err)
-    // }
 })
 
 //GET ALL ENTRY

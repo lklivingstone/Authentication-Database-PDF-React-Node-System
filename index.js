@@ -9,7 +9,7 @@ app.use(cookieParser())
 
 app.use(cors({
     credentials: true,
-    origin: ["http://localhost:3000"]
+    origin: ["https://login-auth-database-pdf.netlify.app/"]
 }))
 
 app.use(express.json())
@@ -20,13 +20,10 @@ const pdfGenerateRoute= require("./routes/pdfGenerate")
 
 app.use("/api/auth", authRoute)
 app.use("/api/entry", entryRoute)
-// app.use("/api/pdfgenerate", pdfGenerateRoute)
-// app.use("/api/users", userRoute)
 
 
 app.get("/api/pdf", async (req, res) => {
 
-    // const url = `http://localhost:3000/entry/${req.params.token}`;
     const url= req.query.target
     console.log(url)
     const browser = await puppeteer.launch({
