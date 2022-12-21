@@ -186,7 +186,7 @@ const Admin = () => {
             
             <h5>Download all the data</h5>
             <PDFDownloadLink document={<PDFFiles rows={rows} />} fileName={user} >
-                {({loading})=> (loading ? <button>Loading...</button> : <button>Donwload</button>)}
+                {({loading})=> (loading ? <button>Loading...</button> : <button>Download</button>)}
             </PDFDownloadLink>
 
             <br/>
