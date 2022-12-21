@@ -18,9 +18,14 @@ const EntrySchema= new mongoose.Schema(
 
         entryNumber: {
             type: Number,
+        },
+
+        date: {
+            type: String,
         }
     },
     {
+
         timestamps: true
     }
 )

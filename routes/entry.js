@@ -38,12 +38,14 @@ router.post("/", (req, res) => {
                 number: req.body.number ,
                 tokenNumber: sequenceId+10000 ,
                 entryNumber: sequenceId ,
+                date: new Date().toLocaleDateString('en-GB').toString()
             })
         
                 const newEntry= entry.save()
                 res.status(200).json(newEntry)
         }
     )
+
 
 })
 
