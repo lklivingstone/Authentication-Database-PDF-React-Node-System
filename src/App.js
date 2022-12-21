@@ -12,6 +12,7 @@ import {
 import { useSelector } from 'react-redux';
 import { selectUser } from './redux/userRedux';
 import Entry from './pages/Entry';
+import Temp from './pages/Temp';
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/login" element= {user ? <Navigate to="/admin" replace /> :  <Login />} />
           <Route path="/admin" element= {user===null ? <Navigate to="/login" replace /> :  <Admin />} />
           <Route path="/entry/:tokenNumber" element= {<Entry />} />
+          <Route path="/temp" element= {<Temp />} />
         </Routes>
       </BrowserRouter>
     </div>

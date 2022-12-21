@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { login } from "../redux/apiCalls"
 import "../styles/Navbar.css"
 import { useNavigate } from "react-router-dom";
+import PDFFile from "../components/PDFFile";
 
 
 const Login = () => {
